@@ -108,6 +108,42 @@
                      </nav>
                  </div>
              </header>
+             <section class="home_banner_area">
+                <div class="banner_inner d-flex align-items-center" style="min-height: 0%" >
+                    <div style="text-align: justify;color: black;padding-left: 30%;" >
+                        <span style="text-align: center;font-size: 25px;font-weight: 600;" >Patient Registration</span><hr/>
+                        <p>*please fill all the fields</p>
+                        <form action="/patientFormRegis" method="POST" >
+                            <span>Type </span> 
+                                <select name="typedisease" required> 
+                                    <option value="haemophilia">Haemophilia</option>
+                                    <option value="thalassemia">Thalassemia</option>
+                                </select>
+                            <span> &nbsp;&nbsp;&nbsp; Gender </span>
+                                <select name="gender" required>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="others">Others</option>
+                                </select><br/><br/>
+                            <span>First Name : </span> <input type="text" name="firstName" required /><br/><br/>
+                            <span>Second Name : </span> <input type="text" name="secondName" required/><br/><br/>
+                            <span>Father's Name : </span> <input type="text" name="fatherName" required/><br/><br/>
+                            <span>Mother's Name : </span> <input type="text" name="motherName" required/><br/><br/>
+                            <span>Mobile : </span> <input type="number" name="mobile" required/><br/><br/>
+                            <span>Date of Birth : </span> <input type="date" name="dob" required/><br/><br/>
+                            <span>Address : </span> <input type="text" name="address" required/><br/><br/>
+                            <span>Aadhaar Number : </span> <input type="number" name="aadhaar" required/><br/><br/>
+                            <span>Date (present) :  </span> <input type="number" name="date" required/><br/><br/>
+                            <button type="submit" class="btn btn-primary">Submit</button>  
+                            <button type="reset" class="btn btn-success" style="margin-left: 5%;" >Reset</button>
+                        </form>
+                    </div>
+
+                </div>
+                
+            </section>
+             
+
 
              <footer class="footer-area section_gap">
                     <div class="container">
