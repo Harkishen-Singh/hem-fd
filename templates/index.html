@@ -13,7 +13,8 @@
         <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
         <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
         <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-        <link rel="stylesheet" href="vendors/animate-css/animate.css">
+		<link rel="stylesheet" href="vendors/animate-css/animate.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <!-- main css -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
@@ -31,14 +32,33 @@
 						</ul>
 					</div>
 					<div class="float-right">
-						<select class="lan_pack">
-							<option value="1">English</option>
-						</select>
-						<a class="ac_btn" href="#">My Account</a>
+						<!-- <select class="lan_pack">
+							<option value="">Register</option>
+							<option value="patient.html">Patient</option>
+							<option value=""><a href="./regisVolunteer">Volunteer</a></option>
+						</select> -->
+						<a class="ac_btn" href="regisPatient" id='this' >Patient</a>
+						<a class="ac_btn" href="regisVolunteer" id='this2' >Volunteer</a>
+						<button class="dn_btn" id="cancel">Cancel</button>
+						<button class="ac_btn" id="regis">Register</button>
 						<a class="dn_btn" href="#">Donate Now</a>
+						
 					</div>
            		</div>	
-           	</div>	
+			   </div>	
+			   <script>
+				  $(document).ready(()=>{
+					  $('#this').hide();$('#this2').hide();$('#cancel').hide();
+					  $('#regis').click(()=>{
+						$('#this').show();$('#this2').show();$('#cancel').show();
+						$('#regis').hide();
+					  })
+					  $('#cancel').click(()=>{
+						$('#this').hide();$('#this2').hide();
+						$('#regis').show();$('#cancel').hide();
+					  })
+				  })
+			   </script>
             <div class="main_menu">
             	<nav class="navbar navbar-expand-lg navbar-light">
 					<div class="container">
