@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="img/favicon.png" type="image/png">
-        <title>Kindity Charity Multi</title>
+        <title>Hemalata Foundation</title>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="vendors/linericon/style.css">
@@ -22,75 +22,93 @@
         
         <!--================Header Menu Area =================-->
         <header class="header_area">
-           	<div class="top_menu row m0">
-           		<div class="container">
-					<div class="float-left">
-						<ul class="list header_social">
-							<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-							<li><a href="#"><i class="fa fa-behance"></i></a></li>
-						</ul>
-					</div>
-					<div class="float-right">
-						<select class="lan_pack">
-							<option value="1">English</option>
-							<option value="1">Bangla</option>
-							<option value="1">Indian</option>
-							<option value="1">Aus</option>
-						</select>
-						<a class="ac_btn" href="#">My Account</a>
-						<a class="dn_btn" href="#">Donate Now</a>
-					</div>
-           		</div>	
-           	</div>	
-            <div class="main_menu">
-            	<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="top_menu row m0">
 					<div class="container">
-						<!-- Brand and toggle get grouped for better mobile display -->
-						<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
-						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-							<ul class="nav navbar-nav menu_nav ml-auto">
-								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> 
-								<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-								<li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li> 
+					 <div class="float-left">
+						 <ul class="list header_social">
+							 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+							 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+						 </ul>
+					 </div>
+					 <div class="float-right">
+						 <!-- <select class="lan_pack">
+							 <option value="">Register</option>
+							 <option value="patient.html">Patient</option>
+							 <option value=""><a href="./regisVolunteer">Volunteer</a></option>
+						 </select> -->
+						 <a class="ac_btn" href="regisPatient" id='this' >Patient</a>
+						 <a class="ac_btn" href="regisVolunteer" id='this2' >Volunteer</a>
+						 <button class="dn_btn" id="cancel">Cancel</button>
+						 <button class="ac_btn" id="regis">Register</button>
+						 <a class="dn_btn" href="#">Donate Now</a>
+						 
+					 </div>
+					</div>	
+				</div>	
+				<script>
+				   $(document).ready(()=>{
+					   $('#this').hide();$('#this2').hide();$('#cancel').hide();
+					   $('#regis').click(()=>{
+						 $('#this').show();$('#this2').show();$('#cancel').show();
+						 $('#regis').hide();
+					   })
+					   $('#cancel').click(()=>{
+						 $('#this').hide();$('#this2').hide();
+						 $('#regis').show();$('#cancel').hide();
+					   })
+				   })
+				</script>
+			 <div class="main_menu">
+				 <nav class="navbar navbar-expand-lg navbar-light">
+					 <div class="container">
+						 <!-- Brand and toggle get grouped for better mobile display -->
+						 <a class="navbar-brand logo_h" href="index.html">
+							 <!-- <img src="img/logo.png" alt=""> -->
+							 <h3>Hemalata Foundation</h3>
+						 </a>
+						 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							 <span class="icon-bar"></span>
+							 <span class="icon-bar"></span>
+							 <span class="icon-bar"></span>
+						 </button>
+						 <!-- Collect the nav links, forms, and other content for toggling -->
+						 <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+							 <ul class="nav navbar-nav menu_nav ml-auto">
+								 <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
+								 <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+								 <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li> 
+								  <li class="nav-item submenu dropdown">
+									 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events</a>
+									 <ul class="dropdown-menu">
+										 <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
+										 <li class="nav-item"><a class="nav-link" href="event-details.html">Event Details</a></li>
+									 </ul>
+								 </li> 
 								 <li class="nav-item submenu dropdown">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events</a>
-									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
-										<li class="nav-item"><a class="nav-link" href="event-details.html">Event Details</a></li>
-									</ul>
-								</li> 
-								<li class="nav-item submenu dropdown">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-										<li class="nav-item"><a class="nav-link" href="donation.html">Donation</a></li>
-									</ul>
-								</li> 
-								<li class="nav-item submenu dropdown">
-									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
-									<ul class="dropdown-menu">
-										<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-										<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-									</ul>
-								</li> 
-								<li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
-							</ul>
-							<ul class="nav navbar-nav navbar-right">
-								<li class="nav-item"><a href="#" class="search"><i class="lnr lnr-magnifier"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-            	</nav>
-            </div>
-        </header>
+									 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+									 <ul class="dropdown-menu">
+										 <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+										 <li class="nav-item"><a class="nav-link" href="donation.html">Donation</a></li>
+									 </ul>
+								 </li> 
+								 <li class="nav-item submenu dropdown">
+									 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+									 <ul class="dropdown-menu">
+										 <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+										 <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+									 </ul>
+								 </li> 
+ 
+								 <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+							 </ul>
+							 <ul class="nav navbar-nav navbar-right">
+								 <li class="nav-item"><a href="#" class="search"><i class="lnr lnr-magnifier"></i></a></li>
+							 </ul>
+						 </div> 
+					 </div>
+				 </nav>
+			 </div>
+		 </header>
         <!--================Header Menu Area =================-->
         
         <!--================Home Banner Area =================-->
@@ -113,30 +131,32 @@
         <!--================Contact Area =================-->
         <section class="contact_area p_120">
             <div class="container">
-                <div id="mapBox" class="mapBox" 
+                <!-- <div id="mapBox" class="mapBox" 
                     data-lat="40.701083" 
                     data-lon="-74.1522848" 
                     data-zoom="13" 
                     data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia."
                     data-mlat="40.701083"
                     data-mlon="-74.1522848">
-                </div>
+				</div> -->
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d935.5942186701672!2d85.76939392723504!3d20.284661839873063!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a190801408d096b%3A0xf889f797e731b33c!2sSum+Food+Plaza!5e0!3m2!1sen!2sin!4v1533409906929" 
+				width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe><br/><br/>
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="contact_info">
                             <div class="info_item">
                                 <i class="lnr lnr-home"></i>
-                                <h6>California, United States</h6>
-                                <p>Santa monica bullevard</p>
+                                <h6>Bhubaneswar, India</h6>
+                                <p></p>
                             </div>
                             <div class="info_item">
                                 <i class="lnr lnr-phone-handset"></i>
-                                <h6><a href="#">00 (440) 9865 562</a></h6>
-                                <p>Mon to Fri 9am to 6 pm</p>
+                                <h6><a href="#">3424234234</a></h6>
+                                <p>somwthing here</p>
                             </div>
                             <div class="info_item">
                                 <i class="lnr lnr-envelope"></i>
-                                <h6><a href="#">support@colorlib.com</a></h6>
+                                <h6><a href="#">d@container.html</a></h6>
                                 <p>Send us your query anytime!</p>
                             </div>
                         </div>

@@ -20,6 +20,21 @@
         <link rel="stylesheet" href="css/responsive.css">
     </head>
     <body>
+            <script>
+                    $(document).ready(()=>{
+                        $('#hidden').hide();
+                        $('#hid').hide();
+                        $('#this').hide();$('#this2').hide();$('#cancel').hide();
+                        $('#regis').click(()=>{
+                          $('#this').show();$('#this2').show();$('#cancel').show();
+                          $('#regis').hide();
+                        })
+                        $('#cancel').click(()=>{
+                          $('#this').hide();$('#this2').hide();
+                          $('#regis').show();$('#cancel').hide();
+                        })
+                    })
+                 </script>
             <header class="header_area">
                     <div class="top_menu row m0">
                         <div class="container">
@@ -44,21 +59,7 @@
                          </div>
                         </div>	
                     </div>	
-                    <script>
-                       $(document).ready(()=>{
-                           $('#hidden').hide();
-                           $('#hidden2').hide();
-                           $('#this').hide();$('#this2').hide();$('#cancel').hide();
-                           $('#regis').click(()=>{
-                             $('#this').show();$('#this2').show();$('#cancel').show();
-                             $('#regis').hide();
-                           })
-                           $('#cancel').click(()=>{
-                             $('#this').hide();$('#this2').hide();
-                             $('#regis').show();$('#cancel').hide();
-                           })
-                       })
-                    </script>
+                    
                  <div class="main_menu">
                      <nav class="navbar navbar-expand-lg navbar-light">
                          <div class="container">
@@ -119,7 +120,7 @@
                             <b><span id="daySpace" style="color: black;" ></span></b><br/><br>
                                 Time : <span id="timeSpace" ></span><br/><br>
                                 <input type="text" name="currentTimeClient" id='hidden' />
-                                <input type="text" name="currentDayClient" id='hidden2' />
+                                <input type="text" name="currentDayClient" id='hid' />
                                 <script>
                                     var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
                                     var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -129,7 +130,7 @@
                                     var day = days[ d.getDay() ];
                                     var month = months[ d.getMonth() ];
                                     document.getElementById('daySpace').innerHTML= d.getDate()+' ' + ' '+month.toString()+', ' + day.toString();
-                                    document.getElementById('hidden2').value = d.getDate()+' ' + ' '+month.toString()+', ' + day.toString();
+                                    document.getElementById('hid').value = d.getDate()+' ' + ' '+month.toString()+', ' + day.toString();
                                     console.warn(d.getDay() + ', '+d.getDate())
                                     setInterval(()=>{ 
                                         let times='';document.getElementById('timeSpace').innerHTML = '';
@@ -140,7 +141,6 @@
                                     },1000)
                                     
                                 </script>
-                            <input type="text" name="currentTimeClient" id='hidden' />
                             <span>Type </span> 
                                 <select name="typedisease" required style="background-color: white;border-radius: 10;padding: 5px;" > 
                                     <option value="haemophilia" style="border-radius: 10px;" >Haemophilia</option>
