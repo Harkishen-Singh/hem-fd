@@ -49,6 +49,9 @@ app.get('/regisVolunteer', (req, res)=>{
 app.post('/patientFormRegis', (req, res)=>{
     signUps.patient(req,res)
 })
+app.post('/volunteerFormRegis', (req, res) => {
+    signUps.volunteer(req,res)
+})
 /* endregistration */
 
 
