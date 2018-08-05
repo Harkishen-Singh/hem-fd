@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" href="img/favicon.png" type="image/png">
+        <title>Hemalata Foundation</title>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="vendors/linericon/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+		<link rel="stylesheet" href="vendors/animate-css/animate.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- main css -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body>
+            <script>
+                    $(document).ready(()=>{
+                        $('#hidden').hide();
+                        $('#hid').hide();
+                        $('#this').hide();$('#this2').hide();$('#cancel').hide();
+                        $('#regis').click(()=>{
+                          $('#this').show();$('#this2').show();$('#cancel').show();
+                          $('#regis').hide();
+                        })
+                        $('#cancel').click(()=>{
+                          $('#this').hide();$('#this2').hide();
+                          $('#regis').show();$('#cancel').hide();
+                        })
+                    })
+                 </script>
+            <header class="header_area">
+                    <div class="top_menu row m0">
+                        <div class="container">
+                         <div class="float-left">
+                             <ul class="list header_social">
+                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                             </ul>
+                         </div>
+                         <div class="float-right">
+                             <!-- <select class="lan_pack">
+                                 <option value="">Register</option>
+                                 <option value="patient.html">Patient</option>
+                                 <option value=""><a href="./regisVolunteer">Volunteer</a></option>
+                             </select> -->
+                             <a class="ac_btn" href="regisPatient" id='this' >Patient</a>
+                             <a class="ac_btn" href="regisVolunteer" id='this2' >Volunteer</a>
+                             <button class="dn_btn" id="cancel">Cancel</button>
+                             <button class="ac_btn" id="regis">Register</button>
+                             <a class="dn_btn" href="#">Donate Now</a>
+                             
+                         </div>
+                        </div>	
+                    </div>	
+                    
+                 <div class="main_menu">
+                     <nav class="navbar navbar-expand-lg navbar-light">
+                         <div class="container">
+                             <!-- Brand and toggle get grouped for better mobile display -->
+                             <a class="navbar-brand logo_h" href="index.html">
+                                 <!-- <img src="img/logo.png" alt=""> -->
+                                 <h3>Hemalata Foundation</h3>
+                             </a>
+                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                                 <span class="icon-bar"></span>
+                             </button>
+                             <!-- Collect the nav links, forms, and other content for toggling -->
+                             <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                                 <ul class="nav navbar-nav menu_nav ml-auto">
+                                     <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li> 
+                                     <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                                     <li class="nav-item"><a class="nav-link" href="about-us.html">About</a></li> 
+                                      <li class="nav-item submenu dropdown">
+                                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Events</a>
+                                         <ul class="dropdown-menu">
+                                             <li class="nav-item"><a class="nav-link" href="event.html">Event</a></li>
+                                             <li class="nav-item"><a class="nav-link" href="event-details.html">Event Details</a></li>
+                                         </ul>
+                                     </li> 
+                                     <li class="nav-item submenu dropdown">
+                                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                         <ul class="dropdown-menu">
+                                             <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+                                             <li class="nav-item"><a class="nav-link" href="donation.html">Donation</a></li>
+                                         </ul>
+                                     </li> 
+                                     <li class="nav-item submenu dropdown">
+                                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blog</a>
+                                         <ul class="dropdown-menu">
+                                             <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                                             <li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+                                         </ul>
+                                     </li> 
+     
+                                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                                 </ul>
+                                 <ul class="nav navbar-nav navbar-right">
+                                     <li class="nav-item"><a href="#" class="search"><i class="lnr lnr-magnifier"></i></a></li>
+                                 </ul>
+                             </div> 
+                         </div>
+                     </nav>
+                 </div>
+             </header>
+             <section class="home_banner_area">
+                <div class="banner_inner d-flex align-items-center" style="min-height: 0%" >
+                    <div style="text-align: justify;color: black;padding-left: 30%;" >
+                        <p style="color: red;font-weight: bold;" >Could not create record for patient aadhaar : <%=aadhaar%>. Same aadhaar information might already exist. </p>
+                        <span style="text-align: center;font-size: 25px;font-weight: 600;" >Patient Registration</span><hr/>
+                        <p>*please fill all the fields</p>
+                        <form action="/patientFormRegis" method="POST" >
+                            <b><span id="daySpace" style="color: black;" ></span></b><br/><br>
+                                Time : <span id="timeSpace" ></span><br/><br>
+                                <input type="text" name="currentTimeClient" id='hidden' />
+                                <input type="text" name="currentDayClient" id='hid' />
+                                <script>
+                                    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+                                    var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+                                    
+                                    var d = new Date();
+                                    var day = days[ d.getDay() ];
+                                    var month = months[ d.getMonth() ];
+                                    document.getElementById('daySpace').innerHTML= d.getDate()+' ' + ' '+month.toString()+', ' + day.toString();
+                                    document.getElementById('hid').value = d.getDate()+' ' + ' '+month.toString()+', ' + day.toString();
+                                    console.warn(d.getDay() + ', '+d.getDate())
+                                    setInterval(()=>{ 
+                                        let times='';document.getElementById('timeSpace').innerHTML = '';
+                                        times = d.getHours().toString() +' hrs '+d.getMinutes().toString()+' mins '+d.getUTCSeconds().toString()+' secs' ;
+                                        document.getElementById('timeSpace').innerHTML = times;
+                                        document.getElementById('hidden').value = times;
+                                        
+                                    },1000)
+                                    
+                                </script>
+                            <span>Type </span> 
+                                <select name="typedisease" required style="background-color: white;border-radius: 10;padding: 5px;" > 
+                                    <option value="haemophilia" style="border-radius: 10px;" >Haemophilia</option>
+                                    <option value="thalassemia" style="border-radius: 10px;">Thalassemia</option>
+                                </select>
+                            <span> &nbsp;&nbsp;&nbsp; Gender </span>
+                                <select name="gender" required style="background-color: white;border-radius: 10;padding: 5px;">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="others">Others</option>
+                                </select><br/><br/>
+                            
+                            <span>First Name : </span> <input type="text" name="firstName" required /><br/><br/>
+                            <span>Last Name : </span> <input type="text" name="lastName" required/><br/><br/>
+                            <span>Father's Name : </span> <input type="text" name="fatherName" required/><br/><br/>
+                            <span>Mother's Name : </span> <input type="text" name="motherName" required/><br/><br/>
+                            <span>Mobile : </span> <input type="number" name="mobile" required/><br/><br/>
+                            <span>Date of Birth : </span> <input type="date" name="dob" required/><br/><br/>
+                            <span>Address : </span> <input type="text" name="address" required/><br/><br/>
+                            <span>Aadhaar Number : </span> <input type="number" name="aadhaar" required/><br/><br/>
+                            <!-- <span>Date (present) :  </span> <input type="number" name="date" required/><br/><br/> -->
+                            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe-1CUI7k7lgoSl_kwP4S0AlSRVoxEuhk3TZLNh27_DzS5blw/viewform?embedded=true" 
+                            width="700" height="320" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe><br/><br/>
+                            <button type="submit" class="btn btn-primary">Submit</button>  
+                            <button type="reset" class="btn btn-success" style="margin-left: 5%;" >Reset</button><br/><br/><br/><br/>
+                        </form>
+                    </div>
+
+                </div>
+                
+            </section>
+             
+
+
+            <footer class="footer-area section_gap">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3  col-md-6 col-sm-6">
+                                <div class="single-footer-widget">
+                                    <h6 class="footer_title">About</h6>
+                                    <p>We are an NGO for the benefit of the society dealing with serious issues of Haemophilia and Thallasemia</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="single-footer-widget">
+                                    <h6 class="footer_title">Navigation Links</h6>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <ul class="list">
+                                                <li><a href="index.html">Home</a></li>
+                                            </ul>
+                                        </div>										
+                                    </div>							
+                                </div>
+                            </div>							
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                BRIEF CONTACT INFO HERE
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="single-footer-widget instafeed">
+                                    <h6 class="footer_title">SELECTED IMAGES</h6>
+                                    <ul class="list instafeed d-flex flex-wrap">
+                                        <!-- <li><img src="img/instagram/Image-01.jpg" alt=""></li> -->
+                                    </ul>
+                                </div>
+                            </div>						
+                        </div>
+                        <div class="border_line"></div>
+                        <div class="row footer-bottom d-flex justify-content-between align-items-center">
+                            <p class="col-lg-8 col-sm-8 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | NorthropIO
+        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            <div class="col-lg-4 col-sm-4 footer-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+    </body>
+</html>

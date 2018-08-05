@@ -1,9 +1,9 @@
 const express=require('express'),
     app=express(),
-    mongo=require('mongodb').MongoClient,
     port=process.env.PORT || 8888,
     host='0.0.0.0',
     datetime=new Date(),
+    signUps = require('./node/signUps'),
     bodyParser=require('body-parser');
 var IP='',
     fileAddr=__dirname
@@ -13,6 +13,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended:true,
 }));
+app.set('view engine','ejs')
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
@@ -44,6 +45,9 @@ app.get('/regisPatient', (req, res)=>{
 })
 app.get('/regisVolunteer', (req, res)=>{
     res.sendFile(fileAddr+'/templates/registration/volunteer.html')
+})
+app.post('/patientFormRegis', (req, res)=>{
+    signUps.patient(req,res)
 })
 /* endregistration */
 
