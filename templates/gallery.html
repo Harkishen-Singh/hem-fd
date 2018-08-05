@@ -303,3 +303,16 @@
         <script src="js/theme.js"></script>
     </body>
 </html>
+<script>
+        $(document).ready(()=>{
+            $('#this').hide();$('#this2').hide();$('#cancel').hide();
+            $('#regis').click(()=>{
+              $('#this').show();$('#this2').show();$('#cancel').show();
+              $('#regis').hide();
+            })
+            $('#cancel').click(()=>{
+              $('#this').hide();$('#this2').hide();
+              $('#regis').show();$('#cancel').hide();
+            })
+        })
+     </script>
