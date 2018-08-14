@@ -3,11 +3,21 @@ const express=require('express'),
     port=process.env.PORT || 5000,
     host='0.0.0.0',
     datetime=new Date(),
+    cluster=require('cluster'),
+    numCPUs = require('os').cpus().length;
     signUps = require('./node/signUps'),
-    bodyParser=require('body-parser');
+    bodyParser=require('body-parser'),
+    patientsMods = require('./node/patients')
+    
 var IP='',
     fileAddr=__dirname
 ;
+console.warn('No of cpu threading async : '+numCPUs)
+app.use((req,res,next)=>{
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+	next();
+});
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -53,6 +63,16 @@ app.post('/volunteerFormRegis', (req, res) => {
     signUps.volunteer(req,res)
 })
 /* endregistration */
+/* from admin panel */
+    app.post('/getPatients', (req, res)=>{
+        console.warn('getPatients called in server')
+        patientsMods.retriveAll(req,res);
+    })
+    app.post('/patientsViewMore', (req, res) => {
+        console.warn('patientsViewMore called in server')
+        patientsMods.viewMore(req,res);
+    })
+/* end admin panel */
 
 
 

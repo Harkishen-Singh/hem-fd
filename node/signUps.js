@@ -1,6 +1,6 @@
 const mongo=require('mongodb').MongoClient,
-    //   url='mongodb://127.0.0.1:27017/';
-        url='mongodb+srv://harkishen:bbsr131@cluster0-rfidk.mongodb.net/hemalata_foundation?retryWrites=true';
+      url='mongodb://127.0.0.1:27017/';
+        // url='mongodb+srv://harkishen:bbsr131@cluster0-rfidk.mongodb.net/hemalata_foundation?retryWrites=true';
 
 function patientSignUp(req, res) {
     let timeClient = req.body.currentTimeClient,
