@@ -7,7 +7,8 @@ const express=require('express'),
     numCPUs = require('os').cpus().length;
     signUps = require('./node/signUps'),
     bodyParser=require('body-parser'),
-    patientsMods = require('./node/patients')
+    patientsMods = require('./node/patients'),
+    volunteerMods = require('./node/volunteers')
     
 var IP='',
     fileAddr=__dirname
@@ -71,6 +72,14 @@ app.post('/volunteerFormRegis', (req, res) => {
     app.post('/patientsViewMore', (req, res) => {
         console.warn('patientsViewMore called in server')
         patientsMods.viewMore(req,res);
+    })
+    app.post('/getVolunteers', (req, res)=>{
+        console.warn('getPatients called in server')
+        volunteerMods.retriveAll(req,res);
+    })
+    app.post('/volunteersViewMore', (req, res) => {
+        console.warn('volunteersViewMore called in server')
+        volunteerMods.viewMore(req,res);
     })
 /* end admin panel */
 

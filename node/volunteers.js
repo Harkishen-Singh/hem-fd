@@ -21,11 +21,11 @@ function sendRes(res) {
     responseServer.value=[]
     }
 
-function retrivePatients(req ,res) {
+function retriveVolunteers(req ,res) {
     mongo.connect(url, (e, dbo)=>{
         if(e) throw e;
         let db = dbo.db('hemalata_foundation');
-        db.collection('patient').find({}).toArray((e, result) => {
+        db.collection('volunteer').find({}).toArray((e, result) => {
             if(e) {isErr=true; throw e}
             else{
                 console.warn('successfully retrived from db');
@@ -39,15 +39,14 @@ function retrivePatients(req ,res) {
     
 }
 function viewMore(req ,res) {
-    let adhaar = req.body.adhaar,
-        disease = req.body.disease;
+    let adhaar = req.body.adhaar;
 
     mongo.connect(url, (e, dbo) => {
         if(e) throw e;
         let db = dbo.db('hemalata_foundation');
-        db.collection('patient').findOne({'aadhaar':adhaar,'disease':disease}, (e, result) => {
+        db.collection('volunteer').findOne({'aadhaar':adhaar}, (e, result) => {
             if(e) throw e;
-            console.warn('info extracted from db for patient with adhaar '+adhaar)
+            console.warn('info extracted from db for volunteer with adhaar '+adhaar)
             console.debug(result);
             responseServer.value = result;
             isErr=false;
@@ -63,6 +62,6 @@ function viewMore(req ,res) {
 
 
 module.exports = {
-    retriveAll: retrivePatients,
+    retriveAll: retriveVolunteers,
     viewMore: viewMore,
 }
